@@ -4,15 +4,15 @@ How to adjust the ESP32 or 8266 Wi-Fi RF power output
 Adjust the WiFi RF poewr output on the ESP32:
 
     Lowest RF power output
-    WiFi.setTxPower(WIFI_POWER_MINUS_1dBm); // Sets WiFi RF power output to lowest level, lowest RF power usage
+    WiFi.setTxPower(WIFI_POWER_MINUS_1dBm); // Set WiFi RF power output to lowest level
 
     Highest RF power output
-    WiFi.setTxPower(WIFI_POWER_19_5dBm);    // Sets WiFi RF power output to highest level, highest RF power usage
+    WiFi.setTxPower(WIFI_POWER_19_5dBm);    // Set WiFi RF power output to highest level
 
 *Use one of the following parameters to change the power output:
 
  *  Available ESP32 RF power parameters:
-    WIFI_POWER_19_5dBm    // 19.5dBm (For 19.5dBm of output, highest. Supply current ~150mA)
+    WIFI_POWER_19_5dBm    // 19.5dBm (19.5dBm output, highest supply current ~150mA)
     WIFI_POWER_19dBm      // 19dBm
     WIFI_POWER_18_5dBm    // 18.5dBm
     WIFI_POWER_17dBm      // 17dBm
@@ -23,7 +23,7 @@ Adjust the WiFi RF poewr output on the ESP32:
     WIFI_POWER_7dBm       //  7dBm
     WIFI_POWER_5dBm       //  5dBm
     WIFI_POWER_2dBm       //  2dBm
-    WIFI_POWER_MINUS_1dBm // -1dBm( For -1dBm of output, lowest. Supply current ~120mA)
+    WIFI_POWER_MINUS_1dBm // -1dBm (For -1dBm output, lowest supply current ~120mA)
 
 Adjust the WiFi RF poewr output on the ESP32:
 
@@ -43,6 +43,7 @@ Example:
 void setup() {
   Serial.begin(115200);
   WiFi.mode(WIFI_AP_STA);
+  // Now get the ESP to create a test network so you can see the difference in RF power / signal strength
   WiFi.softAP("TestNetwork", "password"); // Monitor the WiFi signal strength of the ESP generated Network called 'TestNetwork'
   WiFi.begin("yourSSID", "yourPASSWORD");
   while (WiFi.status() != WL_CONNECTED) {
