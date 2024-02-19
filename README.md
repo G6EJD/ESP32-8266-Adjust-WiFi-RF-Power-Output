@@ -1,7 +1,7 @@
 # ESP32-8266-Adjust-WiFi-RF-Power-Output
 How to adjust the ESP32 or 8266 Wi-Fi RF power output
 
-Adjust the WiFi RF poewr output on the ESP32:
+Adjust the WiFi RF power output on the ESP32:
 
     Lowest RF power output
     WiFi.setTxPower(WIFI_POWER_MINUS_1dBm); // Set WiFi RF power output to lowest level
@@ -25,7 +25,7 @@ Adjust the WiFi RF poewr output on the ESP32:
     WIFI_POWER_2dBm       //  2dBm
     WIFI_POWER_MINUS_1dBm // -1dBm (For -1dBm output, lowest supply current ~120mA)
 
-Adjust the WiFi RF poewr output on the ESP32:
+Adjust the WiFi RF power output on the ESP32:
 
 Available ESP8266 RF power parameters:
     Lowest RF power output
