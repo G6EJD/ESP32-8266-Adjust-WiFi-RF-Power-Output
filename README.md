@@ -40,6 +40,7 @@ Available ESP8266 RF power parameters:
     20.5 (for highest RF power output, supply current ~ 80mA
 
 Example:
+```c
 void setup() {
   Serial.begin(115200);
   WiFi.mode(WIFI_AP_STA);
@@ -64,3 +65,4 @@ void setup() {
     WiFi.setOutputPower(20.5);    // Sets WiFi RF power output to highest level, highest RF power usage
   #endif  
 }
+```
